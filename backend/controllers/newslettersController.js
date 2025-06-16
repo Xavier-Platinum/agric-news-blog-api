@@ -2,7 +2,7 @@ import Letters from "../models/newLetterModel.js";
 import expressAsyncHandler from "express-async-handler";
 import colors from 'colors'
 
-
+// @grunde1234 - Whites spaces
 export const setNewsLetter = expressAsyncHandler(async(req, res)=>{
     /* if(!req.user) {
         return res.status(401).json({ message: 'Unauthorized' });
@@ -36,7 +36,7 @@ export const updateNewsLetter = expressAsyncHandler(async(req, res) => {
             req.body,
             {new: true}
 
-    );
+    ); // @grunde1234 - business logic
     res.status(200).json(updateLetter);
 })
 

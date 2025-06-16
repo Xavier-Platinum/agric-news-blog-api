@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 });
  */
 //Routes for users
-app.use('/api/users', userRouter);
+app.use('/api/users', userRouter); // @grunde1234 - handle in routes index
 // Route for newsletters
 app.use('/api/addingLetters', router);
 app.use('/api/getNewsLetters', routerLetters)

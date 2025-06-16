@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs'
 import expressAsyncHandler from 'express-async-handler'
 import User from '../models/usersAddModel.js'
 
-
+// @grunde1234
 
 
 export const registerUser = expressAsyncHandler(async (req, res) => {
@@ -17,7 +17,7 @@ export const registerUser = expressAsyncHandler(async (req, res) => {
   //Check if user already exists
   const existingUser = await User.findOne({ email });
   if (existingUser) {
-    res.status(400);
+    res.status(400); // @grunde1234
     throw new Error('User already exists with that email');
   }
 
@@ -80,4 +80,4 @@ export const getContent = expressAsyncHandler(async(req,res)=>{
 
 const generateToken = (id)=>{
   return  jwt.sign({id}, process.env.JWT_SECRET, {expiresIn:'30d'});
-}
+} // @grunde1234 - util
